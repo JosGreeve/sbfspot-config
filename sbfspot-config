@@ -2622,7 +2622,7 @@ echo "userhome=$userhome"
 : ${version_wanted:=$(get_latest_release)}
 
 if [ -z "$version_wanted" ]; then
-    echo "Error: Unable to get list of available SBFspot versions for '$lsb_codename'"
+    echo "Error: Unable to get list of available SBFspot2 versions for '$lsb_codename'"
     exit 1
 fi
 
