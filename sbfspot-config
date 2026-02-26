@@ -575,7 +575,7 @@ get_releases()
         # Get available versions for codename (stretch/buster/...)
         # TODO: To query JSON file, install jq
         # jq -r '.[].assets[] | select(.browser_download_url | contains("-$arch-linux-bookworm")) | .browser_download_url' releases
-        rlist=($(grep -Po "(\d+\.)(\d+\.)(\d+)/sbfspot\-.*\-$arch\-.*\-$lsb_codename\.tar\.gz" "$tmppath/releases"))
+        rlist=($(grep -Po "(\d+\.)(\d+\.)(\d+)/sbfspot\-.*\-$arch\-.*\-bookworm\.tar\.gz" "$tmppath/releases"))
         
         for (( i=0; i<${#rlist[@]}; i++ )); do
             local version=$(echo "${rlist[$i]}"|awk '/$/ { print $1 }' FS='/')
