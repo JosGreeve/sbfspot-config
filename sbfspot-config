@@ -2590,7 +2590,7 @@ echo "$appname"
 lsb_id=$(lsb_release -si)
 lsb_desc=$(lsb_release -sd)
 lsb_version=$(lsb_release -sr)
-lsb_codename=$(lsb_release -sc)
+lsb_codename="bookworm"
 
 do_preflightcheck
 
